@@ -27,7 +27,17 @@ function addProjectDetails(e) {
 	var idNumber = projectID.substr('project'.length);
 
 	console.log("User clicked on project " + idNumber);
+
+	$.get("/project/idNumber");
+	console.log("print URL: " + callBack);
 }
+
+/*
+ * Callback function
+ */
+ function callBack(result) {
+ 	console.log("empty callback function" + result);
+ }
 
 /*
  * Make an AJAX call to retrieve a color palette for the site
